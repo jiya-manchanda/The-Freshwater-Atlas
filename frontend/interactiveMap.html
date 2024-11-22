@@ -6,6 +6,13 @@
   <title>The Freshwater Atlas</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="interactiveMap.css">
+  <!-- Include the Google Maps JavaScript API -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCopPijhxyxQ2TezLgmDZLuesIQYnNS81A"
+    loading="lazy"
+    async
+    defer>
+  </script>
 </head>
 <body>
   <div class="container">
@@ -19,18 +26,29 @@
     <main>
       <p class="description">This is an interactive map This is an interactive map This is an interactive map This is an interactive map This is an interactive map This is an interactive map This is an interactive map This is an interactive map This is an interactive map This is an interactive map</p>
       <a href="#" class="read-more">READ MORE <span class="arrow">→</span></a>
-      <div class="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27971.83558873571!2d-81.37923491592095!3d28.538335999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e773d03071cfed%3A0x60b6d9ea9fd7ed72!2sOrange%20County%2C%20FL!5e0!3m2!1sen!2sus!4v1698472444394!5m2!1sen!2sus"
-          width="600"
-          height="450"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
+      <div id="map" style="width: 600px; height: 450px;"></div> <!-- Map container -->
     </main>
   </div>
+
+  <!-- Script to Initialize the Map -->
+  <script>
+    function initMap() {
+      // Create a map centered at a specific location
+      const mapOptions = {
+        center: { lat: 28.538336, lng: -81.379234 }, // Coordinates for Orange County, FL
+        zoom: 10,
+      };
+      const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    }
+
+    // Wait for the Google Maps API to load, then initialize the map
+    window.addEventListener('load', () => {
+      if (typeof google !== 'undefined' && google.maps) {
+        initMap();
+      } else {
+        console.error('Google Maps API failed to load.');
+      }
+    });
+  </script>
 </body>
 </html>
