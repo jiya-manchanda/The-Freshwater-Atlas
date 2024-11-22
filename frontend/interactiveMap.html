@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Map</title>
-    <link rel="stylesheet" href="interactiveMap.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCopPijhxyxQ2TezLgmDZLuesIQYnNS81A" loading="lazy" async defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Freshwater Atlas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="interactiveMap.css">
 </head>
 <body>
+  <div class="container">
     <header>
-        <h1>The Freshwater Atlas</h1>
+      <div class="nav">
+        <a href="#" class="nav-link">ABOUT</a>
+        <h1 class="title">THE FRESHWATER ATLAS</h1>
+        <a href="#" class="nav-link">TEAM</a>
+      </div>
     </header>
-    <div id="map-container">
-        <div id="map"></div>
-        <aside id="sidebar">
-            <h2>Freshwater Site Info</h2>
-            <p>Click on a marker to learn more about each site.</p>
-            <div id="site-info"></div>
-        </aside>
-    </div>
-    <footer>
-        <p>&copy; 2024 Freshwater Awareness Initiative</p>
-    </footer>
-
-    <script src="interactiveMap.js"></script>
+    <main>
+      <p class="description">This is an interactive map This is an interactive map This is an interactive map This is an interactive map This is an interactive map This is an interactive map This is an interactive map This is an interactive map This is an interactive map This is an interactive map</p>
+      <a href="#" class="read-more">READ MORE <span class="arrow">→</span></a>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27971.83558873571!2d-81.37923491592095!3d28.538335999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e773d03071cfed%3A0x60b6d9ea9fd7ed72!2sOrange%20County%2C%20FL!5e0!3m2!1sen!2sus!4v1698472444394!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
