@@ -13,6 +13,7 @@
     async
     defer>
   </script>
+  <script src="interactiveMap.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -29,26 +30,5 @@
       <div id="map" style="width: 600px; height: 450px;"></div> <!-- Map container -->
     </main>
   </div>
-
-  <!-- Script to Initialize the Map -->
-  <script>
-    function initMap() {
-      // Create a map centered at a specific location
-      const mapOptions = {
-        center: { lat: 28.538336, lng: -81.379234 }, // Coordinates for Orange County, FL
-        zoom: 10,
-      };
-      const map = new google.maps.Map(document.getElementById('map'), mapOptions);
-    }
-
-    // Wait for the Google Maps API to load, then initialize the map
-    window.addEventListener('load', () => {
-      if (typeof google !== 'undefined' && google.maps) {
-        initMap();
-      } else {
-        console.error('Google Maps API failed to load.');
-      }
-    });
-  </script>
 </body>
 </html>
