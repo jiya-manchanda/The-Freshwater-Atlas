@@ -3,72 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About The Freshwater Atlas</title>
+  <title>Freshwater Atlas Adventure</title>
   <link rel="stylesheet" href="aboutMap.css">
+  <script defer src="aboutMap.js"></script>
 </head>
 <body>
   <div class="container">
-    <header>
-      <div class="nav">
+    <header class="header">
+      <nav class="nav">
         <a href="index.html" class="nav-link">HOME</a>
         <h1 class="title">The Freshwater Atlas</h1>
         <a href="team.html" class="nav-link">TEAM</a>
-      </div>
+      </nav>
     </header>
+
     <main>
-      <section class="about-section">
-        <h2>About the Project</h2>
-        <p>
-          The **Freshwater Atlas** is an innovative project designed to bring the critical importance of freshwater resources in Orange County, Florida, to life. Using interactive technology and data-driven insights, this atlas serves as a comprehensive educational tool to promote awareness and inspire conservation.
-        </p>
-        <p>
-          By focusing on key freshwater sites—including lakes, rivers, and springs—the map reveals their essential role in supporting ecosystems, human activity, and biodiversity. Through visual storytelling and dynamic exploration, the Freshwater Atlas empowers users with actionable knowledge about the distribution, significance, and challenges surrounding these resources.
-        </p>
+      <!-- Introduction -->
+      <section class="intro">
+        <h2>Welcome to the Freshwater Atlas</h2>
+        <p>The Freshwater Atlas is more than just a map—it's a gateway to understanding the hidden waterways that sustain life in Orange County, Florida. This innovative platform combines cutting-edge technology with environmental science to create an educational and interactive experience for users of all ages.</p>
+        <p>Through this adventure, you'll uncover the stories behind the lakes, rivers, and springs that make up our region's aquatic ecosystem. From conservation efforts to challenges posed by pollution and climate change, the Freshwater Atlas offers insights that empower you to take action.</p>
+        <button id="start-game">Start Your Journey</button>
       </section>
 
-      <section class="features-section">
-        <h2>Key Features</h2>
-        <ul>
-          <li><strong>Interactive Exploration:</strong> Navigate through lakes, rivers, springs, and other freshwater bodies with rich data overlays.</li>
-          <li><strong>Educational Insights:</strong> Discover water quality reports, conservation efforts, and wildlife habitats.</li>
-          <li><strong>Real-World Impact:</strong> Understand the challenges of pollution, overuse, and restoration efforts in preserving these vital resources.</li>
-        </ul>
+      <!-- Chapter 1 -->
+      <section class="chapter hidden" id="chapter1">
+        <div class="chapter-content">
+          <h2>Chapter 1: A World of Water</h2>
+          <p>Water is the foundation of life, shaping landscapes and sustaining ecosystems. The Freshwater Atlas begins by highlighting the vital role of Orange County's freshwater resources. Did you know that over 500 named lakes, countless rivers, and natural springs provide water to local wildlife and millions of residents?</p>
+          <p>Through the Atlas, users can explore these waterways like never before. A unique feature of the map is its ability to show the connections between different water bodies, helping users visualize how water flows and interacts with the environment. For example, click on a river, and you’ll see how it feeds into a nearby lake or wetlands, supporting a delicate ecological balance.</p>
+          <p>Look carefully—there’s a hidden clue in this chapter!</p>
+          <p class="artifact hidden">💧 You found the Water Drop Artifact!</p>
+          <button class="reveal-button" data-target="#chapter2">Next Chapter</button>
+        </div>
+        <div class="chapter-image" id="artifact1"></div>
       </section>
 
-      <section class="goals-section">
-        <h2>Our Vision</h2>
-        <p>
-          At its core, the Freshwater Atlas is about education and advocacy. We aim to:
-        </p>
-        <ul>
-          <li>Encourage stewardship of natural water resources among residents and policymakers.</li>
-          <li>Raise awareness of the interconnectedness between freshwater ecosystems and human activity.</li>
-          <li>Provide a user-friendly platform that translates complex data into actionable insights.</li>
-        </ul>
+      <!-- Chapter 2 -->
+      <section class="chapter alt hidden" id="chapter2">
+        <div class="chapter-content">
+          <h2>Chapter 2: Interactive Technology</h2>
+          <p>What sets the Freshwater Atlas apart is its use of interactive technology. Leveraging tools like the Google Maps API, the Atlas transforms static data into a dynamic learning experience. Every data point is paired with rich visual overlays, making complex concepts accessible and engaging.</p>
+          <p>Users can interact with layers that reveal water quality statistics, biodiversity hotspots, and conservation zones. For example, by toggling a “water quality” layer, you can view real-time data on the pH levels, pollution sources, and restoration projects affecting different water bodies.</p>
+          <p>This functionality has proven invaluable for educators, environmentalists, and policymakers. By presenting information in an easy-to-digest format, the Atlas helps bridge the gap between scientific research and public understanding.</p>
+          <p class="artifact hidden">📜 You found the Conservation Scroll Artifact!</p>
+          <button class="reveal-button" data-target="#chapter3">Next Chapter</button>
+        </div>
+        <div class="chapter-image" id="artifact2"></div>
       </section>
 
-      <section class="data-section">
-        <h2>Data Sources</h2>
-        <p>
-          Our project integrates data from reliable and trusted sources to ensure accuracy and relevance. These include:
-        </p>
-        <ul>
-          <li><a href="https://orange.wateratlas.usf.edu/watershed/default.asp?wshedid=11&wbodyatlas=watershed" target="_blank">Orange County Water Atlas</a></li>
-          <li><a href="https://www.sjrwmd.com/data/water-quality/" target="_blank">St. Johns River Water Management District</a></li>
-          <li><a href="https://waterdata.usgs.gov/nwis" target="_blank">USGS National Water Information System</a></li>
-          <li><a href="https://geodata.dep.state.fl.us/datasets/waterbody-ids-wbids/explore" target="_blank">Florida DEP Waterbody IDs (WBIDs)</a></li>
-          <li>Freshwater Research Center at Rollins</li>
-          <li>Local environmental reports and conservation studies</li>
-        </ul>
+      <!-- Chapter 3 -->
+      <section class="chapter hidden" id="chapter3">
+        <div class="chapter-content">
+          <h2>Chapter 3: Partners in Conservation</h2>
+          <p>The Freshwater Atlas wouldn’t exist without its network of collaborators and data sources. From local organizations to state and federal agencies, these partnerships ensure that the information presented is both accurate and impactful.</p>
+          <p>Key contributors include the Orange County Water Atlas, which provides detailed hydrological data; the St. Johns River Water Management District, which focuses on water conservation; and the USGS National Water Information System, a treasure trove of nationwide water data.</p>
+          <p>These partnerships also extend to conservation groups and academic institutions that use the Atlas to drive research and advocacy. The Atlas serves as a shared resource, fostering collaboration to protect Florida’s precious freshwater ecosystems.</p>
+          <p>Can you spot the artifact hidden in this chapter?</p>
+          <p class="artifact hidden">🌿 You found the Nature Leaf Artifact!</p>
+          <button class="reveal-button" data-target="#chapter4">Next Chapter</button>
+        </div>
+        <div class="chapter-image" id="artifact3"></div>
       </section>
 
-      <section class="tech-section">
-        <h2>Technology</h2>
-        <p>
-          The Freshwater Atlas leverages the <a href="https://developers.google.com/maps" target="_blank">Google Maps API</a> to create a dynamic, visually engaging experience. Through interactive layers and data visualization, the atlas provides a seamless and intuitive user interface that enhances learning and exploration.
-        </p>
+      <!-- Chapter 4 -->
+      <section class="chapter tech hidden" id="chapter4">
+        <div class="chapter-content">
+          <h2>Chapter 4: The Vision for the Future</h2>
+          <p>The Freshwater Atlas isn’t just a tool for today—it’s a vision for the future. As climate change intensifies and Florida’s population grows, the pressure on our freshwater resources will only increase. The Atlas aims to be a guiding light, helping communities navigate these challenges through education and advocacy.</p>
+          <p>Imagine a future where every resident of Orange County understands the value of water and takes steps to conserve it. Where policymakers make informed decisions using data from the Atlas. Where students learn about their local environment and grow up to become stewards of our natural resources.</p>
+          <p>Thank you for joining us on this journey. Your curiosity and commitment are key to ensuring a sustainable future for Florida’s freshwater treasures. Don’t forget to find the final artifact!</p>
+          <p class="artifact hidden">🌊 You found the Ocean Wave Artifact!</p>
+        </div>
+        <div class="chapter-image" id="artifact4"></div>
       </section>
     </main>
+
     <footer>
       <p>© 2024 The Freshwater Atlas. All rights reserved.</p>
     </footer>
