@@ -1,116 +1,161 @@
 /* General Styles */
 body {
   font-family: 'IBM Plex Sans', sans-serif;
-  color: #333333; /* Black */
   margin: 0;
   padding: 0;
   background-color: #fdf8f0; /* Cream */
-}
-
-h1, h2, h3 {
-  font-family: 'JetBrains Mono', monospace;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 15px;
-}
-
-header {
-  width: 100%;
-  background-color: #b7c8b5; /* Sage Green */
-  padding: 20px 10%;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   color: #333333; /* Black */
-}
-
-.nav-link {
-  text-decoration: none;
-  font-weight: 600;
-  color: #333333; /* Black */
-  font-size: 16px;
-}
-
-.nav-link:hover {
-  text-decoration: underline;
-}
-
-.title {
-  font-size: 28px;
-  color: #333333; /* Black */
-  margin: 0;
-  text-align: center;
-  font-family: 'JetBrains Mono', monospace;
-}
-
-/* Section Styling */
-main {
-  max-width: 900px;
-  width: 100%;
-  padding: 20px;
-}
-
-section {
-  margin-bottom: 30px;
-}
-
-.about-section, .features-section, .goals-section, .data-section, .tech-section {
-  background-color: #ffffff; /* White */
-  border: 1px solid #b7c8b5; /* Sage Green */
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 24px;
-  color: #333333; /* Black */
-  margin-bottom: 15px;
-}
-
-section p {
-  font-size: 18px;
   line-height: 1.6;
-  color: #4a4a4a; /* Dark Gray */
 }
 
-ul {
-  list-style-type: disc;
-  margin: 15px 0 0 20px;
-}
-
-li {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #4a4a4a; /* Dark Gray */
+h1, h2 {
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
 }
 
 a {
   color: #77aad6; /* Baby Blue */
   text-decoration: none;
-  font-weight: 600;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-/* Footer Styling */
-footer {
-  width: 100%;
+button {
+  background-color: #77aad6; /* Baby Blue */
+  color: #ffffff; /* White */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #5b8ea2; /* Darker Baby Blue */
+}
+
+.hidden {
+  display: none;
+}
+
+/* Header */
+.header {
+  background-color: #b7c8b5; /* Sage Green */
+  padding: 20px;
   text-align: center;
-  padding: 15px 10%;
+  border-bottom: 4px solid #77aad6; /* Baby Blue */
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333333; /* Black */
+}
+
+.title {
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  padding: 40px 10%;
+  background-color: #ffffff; /* White */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.intro h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  font-size: 18px;
+}
+
+/* Chapters */
+.chapter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 10%;
+  background-color: #ffffff; /* White */
+  border-bottom: 2px solid #b7c8b5; /* Sage Green */
+  position: relative;
+}
+
+.chapter.alt {
   background-color: #b7c8b5; /* Sage Green */
   color: #fdf8f0; /* Cream */
+}
+
+.chapter.tech {
+  background: linear-gradient(135deg, #77aad6, #b7c8b5);
+  color: #ffffff; /* White */
+}
+
+.chapter-content {
+  max-width: 50%;
+}
+
+.chapter-heading {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.chapter p {
+  font-size: 18px;
+}
+
+.chapter ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.chapter ul li {
+  margin-bottom: 10px;
+}
+
+.chapter-image {
+  width: 40%;
+  height: 300px;
+  background: url('water.jpg') no-repeat center center/cover; /* Replace with an actual image */
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chapter-image:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Artifact Styles */
+.artifact {
+  font-size: 18px;
+  color: #77aad6; /* Baby Blue */
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333333; /* Dark Gray */
+  color: #fdf8f0; /* Cream */
   font-size: 14px;
-  font-family: 'JetBrains Mono', monospace;
 }
