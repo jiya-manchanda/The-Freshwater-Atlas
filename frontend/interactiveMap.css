@@ -113,3 +113,22 @@ footer {
   font-size: 14px;
   font-family: 'JetBrains Mono', monospace;
 }
+
+/* Filter Section */
+.filter {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.filter label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.filter select {
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #b7c8b5;
+}
