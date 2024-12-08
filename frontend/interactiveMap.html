@@ -30,6 +30,37 @@
         </p>
         <a href="#" class="read-more">READ MORE <span class="arrow">→</span></a>
       </section>
+      <div class="content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <h2>Explore Resources</h2>
+          <div class="filter-options">
+            <div class="filter-item" data-filter="all">
+              <img src="icons/all-icon.png" alt="All resources" />
+              <span>All</span>
+            </div>
+            <div class="filter-item" data-filter="lake">
+              <img src="icons/lake-icon.png" alt="Lakes" />
+              <span>Lakes</span>
+            </div>
+            <div class="filter-item" data-filter="river">
+              <img src="icons/river-icon.png" alt="Rivers" />
+              <span>Rivers</span>
+            </div>
+            <div class="filter-item" data-filter="spring">
+              <img src="icons/spring-icon.png" alt="Springs" />
+              <span>Springs</span>
+            </div>
+          </div>
+          <ul id="resource-list">
+            <!-- Dynamic resource list will be inserted here -->
+          </ul>
+        </aside>
+      </div>
+
+
+
+
       <section class="filter">
         <label for="resource-type">Filter by Type:</label>
         <select id="resource-type">
@@ -42,6 +73,7 @@
       <div id="map-container">
         <div id="map"></div>
       </div>
+
     </main>
     <footer>
       <p>© 2024 The Freshwater Atlas. All rights reserved.</p>
