@@ -29,10 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
   chapterImages.forEach((image, index) => {
     image.addEventListener('click', () => {
       artifacts[index].classList.remove('hidden');
-      image.style.pointerEvents = 'none'; // Prevent multiple clicks
+      image.style.pointerEvents = 'none';
       foundArtifacts++;
 
-      // Notify when all artifacts are found
       if (foundArtifacts === artifacts.length) {
         setTimeout(() => {
           alert('Congratulations! You found all the artifacts!');
