@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdf8f0;
+  color: #333333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+}
+
+a {
+  color: #77aad6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b7c8b5;
+  padding: 20px;
+}
+
+.nav-link {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333333;
+}
+
+.title {
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  padding: 40px 10%;
+  background: linear-gradient(135deg, #77aad6, #b7c8b5);
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.intro h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  font-size: 18px;
+}
+
+/* Team Section */
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 10%;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.team-image {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-info h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.team-info p {
+  font-size: 16px;
+  color: #555555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333333;
+  color: #fdf8f0;
+  font-size: 14px;
+}
