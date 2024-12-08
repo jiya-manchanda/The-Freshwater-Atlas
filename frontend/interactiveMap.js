@@ -98,39 +98,31 @@ function initMap() {
     { name: "Turtle Springs", lat: 28.5712, lng: -81.3928, type: "spring" },
   ];
 
-  // Add markers to the map
-  freshwaterResources.forEach(resource => {
-    const marker = new google.maps.Marker({
-      position: { lat: resource.lat, lng: resource.lng },
-      map: map,
-      title: resource.name,
-      icon: icons[resource.type],
-    });
+  let markers = [];
 
-    const infoWindow = new google.maps.InfoWindow({
-      content: `
-        <div style="font-family: Arial, sans-serif; font-size: 14px; max-width: 250px;">
-          <h3 style="margin: 0; color: #2E86C1;">${resource.name}</h3>
-          <p style="margin: 5px 0; font-size: 12px; color: #555;">
-            Type: <strong>${resource.type.charAt(0).toUpperCase() + resource.type.slice(1)}</strong>
-          </p>
-          <p style="margin: 5px 0; font-size: 12px; color: #555;">
-            Description: A beautiful ${resource.type} located in Orange County, FL.
-          </p>
-        </div>`,
+  function addMarkers(resources) {
+    markers.forEach(marker => marker.setMap(null));
+    markers = [];
+    resources.forEach(resource => {
+      const marker = new google.maps.Marker({
+        position: { lat: resource.lat, lng: resource.lng },
+        map,
+        icon: icons[resource.type],
+        title: resource.name,
+      });
+      markers.push(marker);
     });
+  }
 
-    marker.addListener('click', () => {
-      infoWindow.open(map, marker);
-    });
+  addMarkers(freshwaterResources);
+
+  document.getElementById('resource-type').addEventListener('change', e => {
+    addMarkers(
+      e.target.value === 'all'
+        ? freshwaterResources
+        : freshwaterResources.filter(x => x.type === e.target.value)
+    );
   });
 }
 
-// Initialize the map
-window.addEventListener('load', () => {
-  if (typeof google !== 'undefined' && google.maps) {
-    initMap();
-  } else {
-    console.error('Google Maps API failed to load.');
-  }
-});
+window.onload = initMap;
