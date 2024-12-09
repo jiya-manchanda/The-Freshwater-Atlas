@@ -530,25 +530,6 @@
         "image": "https://example.com/lake-mabel.jpg",
         "url": null
       },
-
-    {
-        "name": "St. Johns River",
-        "lat": 28.8076,
-        "lng": -81.3777,
-        "type": "river",
-        "description": "The longest river in Florida, known for its scenic beauty and diverse wildlife.",
-        "image": "https://example.com/st-johns-river.jpg",
-        "url": "https://www.sjrwmd.com/recreation/"
-      },
-      {
-        "name": "Wekiva River",
-        "lat": 28.7440,
-        "lng": -81.4448,
-        "type": "river",
-        "description": "A pristine river ideal for kayaking, canoeing, and wildlife observation.",
-        "image": "https://example.com/wekiva-river.jpg",
-        "url": "https://www.floridastateparks.org/Wekiva"
-      },
       {
         "name": "Econlockhatchee River",
         "lat": 28.5700,
@@ -586,15 +567,6 @@
         "url": null
       },
       {
-        "name": "Wekiwa Springs",
-        "lat": 28.7118,
-        "lng": -81.4630,
-        "type": "spring",
-        "description": "A stunning natural spring offering crystal-clear water for swimming and snorkeling.",
-        "image": "https://example.com/wekiwa-springs.jpg",
-        "url": "https://www.floridastateparks.org/WekiwaSprings"
-      },
-      {
         "name": "Rock Springs",
         "lat": 28.7453,
         "lng": -81.5112,
@@ -602,24 +574,6 @@
         "description": "A popular spring known for its tubing opportunities and scenic beauty.",
         "image": "https://example.com/rock-springs.jpg",
         "url": "https://www.floridastateparks.org/RockSpringsRun"
-      },
-      {
-        "name": "Blue Springs",
-        "lat": 28.9486,
-        "lng": -81.3374,
-        "type": "spring",
-        "description": "A haven for manatees during winter and a great spot for diving and snorkeling.",
-        "image": "https://example.com/blue-springs.jpg",
-        "url": "https://www.floridastateparks.org/BlueSpring"
-      },
-      {
-        "name": "Sanlando Springs",
-        "lat": 28.6776,
-        "lng": -81.3975,
-        "type": "spring",
-        "description": "A spring nestled in a private park, known for its serene environment.",
-        "image": "https://example.com/sanlando-springs.jpg",
-        "url": null
       },
       {
         "name": "Island Springs",
@@ -631,30 +585,12 @@
         "url": null
       },
       {
-        "name": "Sweetwater Springs",
-        "lat": 28.6944,
-        "lng": -81.4450,
-        "type": "spring",
-        "description": "A charming spring ideal for swimming and wildlife spotting.",
-        "image": "https://example.com/sweetwater-springs.jpg",
-        "url": null
-      },
-      {
         "name": "Palm Springs",
         "lat": 28.5912,
         "lng": -81.2902,
         "type": "spring",
         "description": "A lesser-known spring with a peaceful ambiance and clear waters.",
         "image": "https://example.com/palm-springs.jpg",
-        "url": null
-      },
-      {
-        "name": "Bear Springs",
-        "lat": 28.7485,
-        "lng": -81.5416,
-        "type": "spring",
-        "description": "A hidden gem surrounded by lush forest, perfect for a quiet retreat.",
-        "image": "https://example.com/bear-springs.jpg",
         "url": null
       },
       {

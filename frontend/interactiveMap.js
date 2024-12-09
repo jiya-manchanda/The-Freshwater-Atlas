@@ -63,8 +63,23 @@ function initMap() {
     .then(freshwaterResources => {
       addMarkers(freshwaterResources);
 
+      const filterItems = document.querySelectorAll('.filter-item');
+      filterItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const filterValue = item.getAttribute('data-filter');
+
+          addMarkers(
+              filterValue === 'all'
+              ? freshwaterResources
+              : freshwaterResources.filter(x => x.type === filterValue)
+          );
+          // Update dropdown to match sidebar selection
+          document.getElementById('resource-type').value = filterValue;
+        });
+      });
+
       // Filter markers based on dropdown selection
-      document.getElementById('resource-type').addEventListener('change', e => {
+      document.getElementById('resource-list').addEventListener('change', e => {
         addMarkers(
           e.target.value === 'all'
             ? freshwaterResources
