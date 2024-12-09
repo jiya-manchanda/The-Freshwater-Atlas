@@ -56,23 +56,25 @@ function initMap() {
       markers.push(marker);
     });
   }
-
-  // Fetch data from JSON file
+  
   fetch('freshwaterResources.json')
-    .then(response => response.json())
-    .then(freshwaterResources => {
-      addMarkers(freshwaterResources);
+  .then(response => response.json())
+  .then(freshwaterResources => {
+    console.log(freshwaterResources); // Check the fetched data
+    addMarkers(freshwaterResources);
 
-      // Filter markers based on dropdown selection
-      document.getElementById('resource-type').addEventListener('change', e => {
-        addMarkers(
-          e.target.value === 'all'
-            ? freshwaterResources
-            : freshwaterResources.filter(x => x.type === e.target.value)
-        );
-      });
-    })
-    .catch(error => console.error("Error loading JSON data:", error));
+    // Filter markers based on dropdown selection
+    document.getElementById('resource-type').addEventListener('change', e => {
+      console.log(e.target.value); // Check dropdown changes
+      addMarkers(
+        e.target.value === 'all'
+          ? freshwaterResources
+          : freshwaterResources.filter(x => x.type === e.target.value)
+      );
+    });
+  })
+  .catch(error => console.error("Error loading JSON data:", error));
+
 }
 
 window.onload = initMap;
