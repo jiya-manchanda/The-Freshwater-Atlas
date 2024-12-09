@@ -56,25 +56,38 @@ function initMap() {
       markers.push(marker);
     });
   }
-  
+
+  // Fetch data from JSON file
   fetch('freshwaterResources.json')
-  .then(response => response.json())
-  .then(freshwaterResources => {
-    console.log(freshwaterResources); // Check the fetched data
-    addMarkers(freshwaterResources);
+    .then(response => response.json())
+    .then(freshwaterResources => {
+      addMarkers(freshwaterResources);
 
-    // Filter markers based on dropdown selection
-    document.getElementById('resource-type').addEventListener('change', e => {
-      console.log(e.target.value); // Check dropdown changes
-      addMarkers(
-        e.target.value === 'all'
-          ? freshwaterResources
-          : freshwaterResources.filter(x => x.type === e.target.value)
-      );
-    });
-  })
-  .catch(error => console.error("Error loading JSON data:", error));
+      const filterItems = document.querySelectorAll('.filter-item');
+      filterItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const filterValue = item.getAttribute('data-filter');
 
+          addMarkers(
+              filterValue === 'all'
+              ? freshwaterResources
+              : freshwaterResources.filter(x => x.type === filterValue)
+          );
+          // Update dropdown to match sidebar selection
+          document.getElementById('resource-type').value = filterValue;
+        });
+      });
+
+      // Filter markers based on dropdown selection
+      document.getElementById('resource-list').addEventListener('change', e => {
+        addMarkers(
+          e.target.value === 'all'
+            ? freshwaterResources
+            : freshwaterResources.filter(x => x.type === e.target.value)
+        );
+      });
+    })
+    .catch(error => console.error("Error loading JSON data:", error));
 }
 
 window.onload = initMap;
