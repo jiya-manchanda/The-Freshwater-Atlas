@@ -93,7 +93,7 @@ header {
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 0 auto;
   align-items: stretch;
 }
 
@@ -162,7 +162,6 @@ header {
 #resource-list li:hover {
   background-color: #ddd;
 }
-
 
 /* Map Section */
 #map-container {
