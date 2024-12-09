@@ -1,4 +1,673 @@
 [
+  {
+    "name": "Lake Apopka",
+    "lat": 28.5961,
+    "lng": -81.6347,
+    "type": "lake",
+    "description": "One of Florida's largest lakes, known for birdwatching and ecological importance.",
+    "image": "https://greatfloridariverway.com/wp-content/uploads/2020/10/LakeApopkaPhotowithSunset.jpg",
+    "url": "https://reunitetherivers.com/location/lake-apopka/"
+  },
+  {
+    "name": "Lake Eola",
+    "lat": 28.5439,
+    "lng": -81.3739,
+    "type": "lake",
+    "description": "A scenic lake in downtown Orlando, famous for its swan boats and events.",
+    "image": "https://example.com/lake-eola.jpg",
+    "url": "https://www.orlando.gov/Parks-the-Lake-Eola-Park"
+  },
+  {
+    "name": "Lake Conway",
+    "lat": 28.4683,
+    "lng": -81.3492,
+    "type": "lake",
+    "description": "Part of the Conway Chain of Lakes, great for boating and water sports.",
+    "image": "https://example.com/lake-conway.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Underhill",
+    "lat": 28.5389,
+    "lng": -81.3370,
+    "type": "lake",
+    "description": "A small lake with a walking trail and scenic views near downtown Orlando.",
+    "image": "https://example.com/lake-underhill.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Baldwin",
+    "lat": 28.5728,
+    "lng": -81.3228,
+    "type": "lake",
+    "description": "Popular for its nearby park and recreational activities, including kayaking.",
+    "image": "https://example.com/lake-baldwin.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Jessamine",
+    "lat": 28.4711,
+    "lng": -81.3728,
+    "type": "lake",
+    "description": "A serene residential lake perfect for kayaking and paddleboarding.",
+    "image": "https://example.com/lake-jessamine.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Ivanhoe",
+    "lat": 28.5634,
+    "lng": -81.3791,
+    "type": "lake",
+    "description": "Located near Orlando’s Ivanhoe Village, ideal for paddleboarding.",
+    "image": "https://example.com/lake-ivanhoe.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Fairview",
+    "lat": 28.5892,
+    "lng": -81.3986,
+    "type": "lake",
+    "description": "Features a public park and boat ramp, great for fishing and picnics.",
+    "image": "https://example.com/lake-fairview.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Hart",
+    "lat": 28.3731,
+    "lng": -81.1793,
+    "type": "lake",
+    "description": "A large, tranquil lake popular for fishing and nature viewing.",
+    "image": "https://example.com/lake-hart.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Mary Jane",
+    "lat": 28.3731,
+    "lng": -81.1793,
+    "type": "lake",
+    "description": "Connected to Lake Hart, known for its serene surroundings.",
+    "image": "https://example.com/lake-mary-jane.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Pickett",
+    "lat": 28.6046,
+    "lng": -81.1125,
+    "type": "lake",
+    "description": "A private residential lake with limited access.",
+    "image": "https://example.com/lake-pickett.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Butler",
+    "lat": 28.4883,
+    "lng": -81.5514,
+    "type": "lake",
+    "description": "Part of the Butler Chain of Lakes, a hotspot for boating and fishing.",
+    "image": "https://example.com/lake-butler.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Tibet",
+    "lat": 28.4675,
+    "lng": -81.5386,
+    "type": "lake",
+    "description": "A scenic lake in the Butler Chain, surrounded by luxury homes.",
+    "image": "https://example.com/lake-tibet.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Sheen",
+    "lat": 28.4683,
+    "lng": -81.5236,
+    "type": "lake",
+    "description": "Known for its pristine waters and beautiful surroundings.",
+    "image": "https://example.com/lake-sheen.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Virginia",
+    "lat": 28.5921,
+    "lng": -81.3456,
+    "type": "lake",
+    "description": "Located in Winter Park, perfect for scenic boat tours.",
+    "image": "https://example.com/lake-virginia.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Mizell",
+    "lat": 28.5950,
+    "lng": -81.3450,
+    "type": "lake",
+    "description": "A small lake in Winter Park connected to Lake Virginia.",
+    "image": "https://example.com/lake-mizell.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Osceola",
+    "lat": 28.5986,
+    "lng": -81.3431,
+    "type": "lake",
+    "description": "Known for the Winter Park Scenic Boat Tour.",
+    "image": "https://example.com/lake-osceola.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Maitland",
+    "lat": 28.6168,
+    "lng": -81.3508,
+    "type": "lake",
+    "description": "A popular lake in Winter Park with connections to nearby lakes.",
+    "image": "https://example.com/lake-maitland.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Estelle",
+    "lat": 28.5736,
+    "lng": -81.3761,
+    "type": "lake",
+    "description": "Located near Loch Haven Park, home to Orlando’s cultural institutions.",
+    "image": "https://example.com/lake-estelle.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Rowena",
+    "lat": 28.5686,
+    "lng": -81.3650,
+    "type": "lake",
+    "description": "A small lake near the Orlando Science Center.",
+    "image": "https://example.com/lake-rowena.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Sue",
+    "lat": 28.5686,
+    "lng": -81.3525,
+    "type": "lake",
+    "description": "A peaceful lake surrounded by residential neighborhoods.",
+    "image": "https://example.com/lake-sue.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Highland",
+    "lat": 28.5598,
+    "lng": -81.3705,
+    "type": "lake",
+    "description": "Known for its serene setting and proximity to downtown Orlando.",
+    "image": "https://example.com/lake-highland.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Formosa",
+    "lat": 28.5686,
+    "lng": -81.3686,
+    "type": "lake",
+    "description": "A small lake near the Orlando Urban Trail.",
+    "image": "https://example.com/lake-formosa.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Lorna Doone",
+    "lat": 28.5486,
+    "lng": -81.4050,
+    "type": "lake",
+    "description": "Located near Camping World Stadium, popular for events.",
+    "image": "https://example.com/lake-lorna-doone.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Lucerne",
+    "lat": 28.5345,
+    "lng": -81.3783,
+    "type": "lake",
+    "description": "A picturesque lake near downtown Orlando.",
+    "image": "https://example.com/lake-lucerne.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Davis",
+    "lat": 28.5314,
+    "lng": -81.3668,
+    "type": "lake",
+    "description": "A neighborhood lake with a peaceful walking trail.",
+    "image": "https://example.com/lake-davis.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Cherokee",
+    "lat": 28.5335,
+    "lng": -81.3712,
+    "type": "lake",
+    "description": "A scenic lake surrounded by historic homes.",
+    "image": "https://example.com/lake-cherokee.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Copeland",
+    "lat": 28.5264,
+    "lng": -81.3764,
+    "type": "lake",
+    "description": "A small lake with residential charm.",
+    "image": "https://example.com/lake-copeland.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Holden",
+    "lat": 28.5086,
+    "lng": -81.3836,
+    "type": "lake",
+    "description": "Known for its tranquil environment and boating activities.",
+    "image": "https://example.com/lake-holden.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Jennie Jewel",
+    "lat": 28.5014,
+    "lng": -81.3586,
+    "type": "lake",
+    "description": "A small residential lake, perfect for kayaking and paddleboarding.",
+    "image": "https://example.com/lake-jennie-jewel.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Gatlin",
+    "lat": 28.4892,
+    "lng": -81.3586,
+    "type": "lake",
+    "description": "A tranquil lake surrounded by scenic neighborhoods.",
+    "image": "https://example.com/lake-gatlin.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake George",
+    "lat": 28.6125,
+    "lng": -81.1125,
+    "type": "lake",
+    "description": "Known for fishing and its connection to the St. Johns River.",
+    "image": "https://example.com/lake-george.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Rose",
+    "lat": 28.5178,
+    "lng": -81.5715,
+    "type": "lake",
+    "description": "A quiet lake ideal for relaxing and nature watching.",
+    "image": "https://example.com/lake-rose.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Roberts",
+    "lat": 28.5178,
+    "lng": -81.5715,
+    "type": "lake",
+    "description": "A residential lake with pristine waters and serene views.",
+    "image": "https://example.com/lake-roberts.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Speer",
+    "lat": 28.4791,
+    "lng": -81.5987,
+    "type": "lake",
+    "description": "Popular for fishing and kayaking, with a peaceful atmosphere.",
+    "image": "https://example.com/lake-speer.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Rouse",
+    "lat": 28.6046,
+    "lng": -81.1125,
+    "type": "lake",
+    "description": "A serene lake surrounded by lush greenery.",
+    "image": "https://example.com/lake-rouse.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Price",
+    "lat": 28.6046,
+    "lng": -81.1125,
+    "type": "lake",
+    "description": "A tranquil lake with excellent fishing opportunities.",
+    "image": "https://example.com/lake-price.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Waunatta",
+    "lat": 28.5389,
+    "lng": -81.3370,
+    "type": "lake",
+    "description": "A small lake perfect for paddleboarding and nature photography.",
+    "image": "https://example.com/lake-waunatta.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Georgia",
+    "lat": 28.6046,
+    "lng": -81.1125,
+    "type": "lake",
+    "description": "A peaceful lake with scenic views and wildlife activity.",
+    "image": "https://example.com/lake-georgia.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Lee",
+    "lat": 28.6046,
+    "lng": -81.1125,
+    "type": "lake",
+    "description": "A serene lake surrounded by private properties.",
+    "image": "https://example.com/lake-lee.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Martha",
+    "lat": 28.6046,
+    "lng": -81.1125,
+    "type": "lake",
+    "description": "A small lake known for its quiet and peaceful setting.",
+    "image": "https://example.com/lake-martha.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Pearl",
+    "lat": 28.6043,
+    "lng": -81.2642,
+    "type": "lake",
+    "description": "A residential lake with great views and fishing spots.",
+    "image": "https://example.com/lake-pearl.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Shannon",
+    "lat": 28.5648,
+    "lng": -81.3412,
+    "type": "lake",
+    "description": "A small, quiet lake surrounded by private homes.",
+    "image": "https://example.com/lake-shannon.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Barton",
+    "lat": 28.5514,
+    "lng": -81.3100,
+    "type": "lake",
+    "description": "Known for its fishing and serene atmosphere.",
+    "image": "https://example.com/lake-barton.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Arnold",
+    "lat": 28.5389,
+    "lng": -81.3370,
+    "type": "lake",
+    "description": "A small lake surrounded by quiet neighborhoods.",
+    "image": "https://example.com/lake-arnold.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Como",
+    "lat": 28.5358,
+    "lng": -81.3520,
+    "type": "lake",
+    "description": "A scenic lake with a peaceful residential setting.",
+    "image": "https://example.com/lake-como.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Weldona",
+    "lat": 28.5264,
+    "lng": -81.3668,
+    "type": "lake",
+    "description": "A small lake known for its quiet surroundings.",
+    "image": "https://example.com/lake-weldona.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Emerald",
+    "lat": 28.5382,
+    "lng": -81.3792,
+    "type": "lake",
+    "description": "A picturesque lake near downtown Orlando.",
+    "image": "https://example.com/lake-emerald.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Adair",
+    "lat": 28.5633,
+    "lng": -81.3886,
+    "type": "lake",
+    "description": "A historic lake with stunning views and charming surroundings.",
+    "image": "https://example.com/lake-adair.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Fairlane",
+    "lat": 28.5891,
+    "lng": -81.3300,
+    "type": "lake",
+    "description": "A peaceful residential lake perfect for relaxing by the water.",
+    "image": "https://example.com/lake-fairlane.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Olympia",
+    "lat": 28.5894,
+    "lng": -81.5356,
+    "type": "lake",
+    "description": "A scenic lake surrounded by beautiful homes.",
+    "image": "https://example.com/lake-olympia.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Nona",
+    "lat": 28.3793,
+    "lng": -81.2601,
+    "type": "lake",
+    "description": "A vibrant community with access to beautiful lakefront views.",
+    "image": "https://example.com/lake-nona.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Cane",
+    "lat": 28.4868,
+    "lng": -81.4603,
+    "type": "lake",
+    "description": "A residential lake perfect for kayaking and paddleboarding.",
+    "image": "https://example.com/lake-cane.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Sheen",
+    "lat": 28.4671,
+    "lng": -81.5404,
+    "type": "lake",
+    "description": "Known for pristine waters and boating activities.",
+    "image": "https://example.com/lake-sheen.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Tibet Butler",
+    "lat": 28.4592,
+    "lng": -81.5481,
+    "type": "lake",
+    "description": "A scenic lake in the Butler Chain with luxury homes.",
+    "image": "https://example.com/lake-tibet-butler.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Burden",
+    "lat": 28.4518,
+    "lng": -81.5748,
+    "type": "lake",
+    "description": "A quiet residential lake surrounded by scenic views.",
+    "image": "https://example.com/lake-burden.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Crescent",
+    "lat": 28.5487,
+    "lng": -81.4764,
+    "type": "lake",
+    "description": "A small, peaceful lake with charming surroundings.",
+    "image": "https://example.com/lake-crescent.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Blanche",
+    "lat": 28.4689,
+    "lng": -81.5409,
+    "type": "lake",
+    "description": "Known for its stunning views and boating activities.",
+    "image": "https://example.com/lake-blanche.jpg",
+    "url": null
+  },
+  {
+    "name": "Lake Mabel",
+    "lat": 28.4099,
+    "lng": -81.5913,
+    "type": "lake",
+    "description": "A serene lake surrounded by lush greenery.",
+    "image": "https://example.com/lake-mabel.jpg",
+    "url": null
+  },
+
+{
+    "name": "St. Johns River",
+    "lat": 28.8076,
+    "lng": -81.3777,
+    "type": "river",
+    "description": "The longest river in Florida, known for its scenic beauty and diverse wildlife.",
+    "image": "https://example.com/st-johns-river.jpg",
+    "url": "https://www.sjrwmd.com/recreation/"
+  },
+  {
+    "name": "Wekiva River",
+    "lat": 28.7440,
+    "lng": -81.4448,
+    "type": "river",
+    "description": "A pristine river ideal for kayaking, canoeing, and wildlife observation.",
+    "image": "https://example.com/wekiva-river.jpg",
+    "url": "https://www.floridastateparks.org/Wekiva"
+  },
+  {
+    "name": "Econlockhatchee River",
+    "lat": 28.5700,
+    "lng": -81.1093,
+    "type": "river",
+    "description": "A meandering river flowing through lush wetlands and forests.",
+    "image": "https://example.com/econlockhatchee-river.jpg",
+    "url": "https://www.sjrwmd.com/lands/recreation/econlockhatchee/"
+  },
+  {
+    "name": "Little Econ River",
+    "lat": 28.5842,
+    "lng": -81.2854,
+    "type": "river",
+    "description": "A tributary of the Econlockhatchee River, offering peaceful paddling experiences.",
+    "image": "https://example.com/little-econ-river.jpg",
+    "url": null
+  },
+  {
+    "name": "Middle River",
+    "lat": 28.6512,
+    "lng": -81.3301,
+    "type": "river",
+    "description": "A lesser-known river surrounded by natural beauty and tranquility.",
+    "image": "https://example.com/middle-river.jpg",
+    "url": null
+  },
+  {
+    "name": "South Fork Little Econ",
+    "lat": 28.5394,
+    "lng": -81.2853,
+    "type": "river",
+    "description": "A peaceful waterway branching off the Little Econ River.",
+    "image": "https://example.com/south-fork-little-econ.jpg",
+    "url": null
+  },
+  {
+    "name": "Wekiwa Springs",
+    "lat": 28.7118,
+    "lng": -81.4630,
+    "type": "spring",
+    "description": "A stunning natural spring offering crystal-clear water for swimming and snorkeling.",
+    "image": "https://example.com/wekiwa-springs.jpg",
+    "url": "https://www.floridastateparks.org/WekiwaSprings"
+  },
+  {
+    "name": "Rock Springs",
+    "lat": 28.7453,
+    "lng": -81.5112,
+    "type": "spring",
+    "description": "A popular spring known for its tubing opportunities and scenic beauty.",
+    "image": "https://example.com/rock-springs.jpg",
+    "url": "https://www.floridastateparks.org/RockSpringsRun"
+  },
+  {
+    "name": "Blue Springs",
+    "lat": 28.9486,
+    "lng": -81.3374,
+    "type": "spring",
+    "description": "A haven for manatees during winter and a great spot for diving and snorkeling.",
+    "image": "https://example.com/blue-springs.jpg",
+    "url": "https://www.floridastateparks.org/BlueSpring"
+  },
+  {
+    "name": "Sanlando Springs",
+    "lat": 28.6776,
+    "lng": -81.3975,
+    "type": "spring",
+    "description": "A spring nestled in a private park, known for its serene environment.",
+    "image": "https://example.com/sanlando-springs.jpg",
+    "url": null
+  },
+  {
+    "name": "Island Springs",
+    "lat": 28.6272,
+    "lng": -81.4772,
+    "type": "spring",
+    "description": "A small spring surrounded by lush greenery, perfect for relaxing.",
+    "image": "https://example.com/island-springs.jpg",
+    "url": null
+  },
+  {
+    "name": "Sweetwater Springs",
+    "lat": 28.6944,
+    "lng": -81.4450,
+    "type": "spring",
+    "description": "A charming spring ideal for swimming and wildlife spotting.",
+    "image": "https://example.com/sweetwater-springs.jpg",
+    "url": null
+  },
+  {
+    "name": "Palm Springs",
+    "lat": 28.5912,
+    "lng": -81.2902,
+    "type": "spring",
+    "description": "A lesser-known spring with a peaceful ambiance and clear waters.",
+    "image": "https://example.com/palm-springs.jpg",
+    "url": null
+  },
+  {
+    "name": "Bear Springs",
+    "lat": 28.7485,
+    "lng": -81.5416,
+    "type": "spring",
+    "description": "A hidden gem surrounded by lush forest, perfect for a quiet retreat.",
+    "image": "https://example.com/bear-springs.jpg",
+    "url": null
+  },
+  {
+    "name": "Turtle Springs",
+    "lat": 28.5712,
+    "lng": -81.3928,
+    "type": "spring",
+    "description": "A small, serene spring ideal for kayaking and wildlife watching.",
+    "image": "https://example.com/turtle-springs.jpg",
+    "url": null
+  }
+]
+
     {
         "name": "Lake Apopka",
         "lat": 28.5961,
@@ -603,3 +1272,4 @@
         "url": null
       }
 ]
+>>>>>>> b078890a8da9e554679d846aba886ddbefd6eec2
