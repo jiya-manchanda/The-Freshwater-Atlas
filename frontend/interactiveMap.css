@@ -84,9 +84,9 @@ header {
 
 /* Map Section */
 #map-container {
-  flex: 1; /* Takes up remaining space */
+  flex: 1;
   height: 100%;
-  background-color: #b7dff5; /* Matches light blue in screenshot */
+  background-color: #b7dff5; 
 }
 
 #map {
