@@ -116,14 +116,6 @@ header {
   color: #555555;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333333;
-  color: #fdf8f0;
-  font-size: 14px;
-}
 
 header {
   background: url('https://www.kunstnet.de/w4/16654/wasser-ii.jpg') center/cover no-repeat;
@@ -143,4 +135,31 @@ header::before {
   height: 100%;
   background-color: rgba(183, 200, 181, 0.5); /* Low transparency overlay */
   z-index: 1;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333333;
+  color: #fdf8f0;
+  font-size: 14px;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 15px;
+}
+
+footer .social-icons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.2);
 }

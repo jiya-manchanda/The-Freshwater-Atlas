@@ -235,15 +235,6 @@ footer {
   height: 100%;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333333;
-  color: #fdf8f0;
-  font-size: 12px;
-}
-
 /* filter item colors */
 .filter-item[data-filter="lake"] span {
   color: red;
@@ -322,9 +313,35 @@ header::before {
   background-color: rgba(183, 200, 181, 0.5);
 }
 
-
 .logo-link {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333333;
+  color: #fdf8f0;
+  font-size: 14px;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 15px;
+}
+
+footer .social-icons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.2);
 }
