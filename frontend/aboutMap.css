@@ -169,3 +169,21 @@ footer {
   color: #fdf8f0;
   font-size: 14px;
 }
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 15px; /* Add spacing between icons */
+}
+
+footer .social-icons img {
+  width: 30px; /* Ensures all icons are the same size */
+  height: 30px;
+  border-radius: 50%; /* Optional: makes icons circular */
+  transition: transform 0.3s ease; /* Adds hover effect */
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
