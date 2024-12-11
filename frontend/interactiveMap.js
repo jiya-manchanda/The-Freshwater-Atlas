@@ -44,10 +44,10 @@ function initMap() {
               ${resource.description}
             </p>
             ${
-              resource.url
+            resource.url
                 ? `<a href="${resource.url}" target="_blank" style="text-decoration: none; color: #2E86C1;">Learn More</a>`
                 : ""
-            }
+        }
           </div>
         `);
         infoWindow.open(map, marker);
@@ -59,35 +59,53 @@ function initMap() {
 
   // Fetch data from JSON file
   fetch('freshwaterResources.json')
-    .then(response => response.json())
-    .then(freshwaterResources => {
-      addMarkers(freshwaterResources);
+      .then(response => response.json())
+      .then(freshwaterResources => {
+        // Initialize markers
+        addMarkers(freshwaterResources);
 
-      const filterItems = document.querySelectorAll('.filter-item');
-      filterItems.forEach(item => {
-        item.addEventListener('click', () => {
-          const filterValue = item.getAttribute('data-filter');
+        // Attach event listeners once the DOM is ready
+        const searchButton = document.getElementById('search-button');
+        const searchbar = document.getElementById('search-bar');
+        const filterItems = document.querySelectorAll('.filter-item');
+        const resourceList = document.getElementById('resource-list');
 
-          addMarkers(
-              filterValue === 'all'
-              ? freshwaterResources
-              : freshwaterResources.filter(x => x.type === filterValue)
-          );
-          // Update dropdown to match sidebar selection
-          document.getElementById('resource-type').value = filterValue;
+        if (searchButton && searchbar) {
+          searchButton.addEventListener('click', () => {
+            const query = searchbar.value.toLowerCase().trim();
+            const filteredResources = freshwaterResources.filter(r =>
+                r.name.toLowerCase().includes(query)
+            );
+            addMarkers(filteredResources);
+          });
+        }
+
+        // Add event listeners for filters
+        filterItems.forEach(item => {
+          item.addEventListener('click', () => {
+            const filterValue = item.getAttribute('data-filter');
+            addMarkers(
+                filterValue === 'all'
+                    ? freshwaterResources
+                    : freshwaterResources.filter(r => r.type === filterValue)
+            );
+          });
         });
-      });
 
-      // Filter markers based on dropdown selection
-      document.getElementById('resource-list').addEventListener('change', e => {
-        addMarkers(
-          e.target.value === 'all'
-            ? freshwaterResources
-            : freshwaterResources.filter(x => x.type === e.target.value)
-        );
-      });
-    })
-    .catch(error => console.error("Error loading JSON data:", error));
+        // Dropdown filter
+        if (resourceList) {
+          resourceList.addEventListener('change', e => {
+            const filterValue = e.target.value;
+            addMarkers(
+                filterValue === 'all'
+                    ? freshwaterResources
+                    : freshwaterResources.filter(r => r.type === filterValue)
+            );
+          });
+        }
+      })
+      .catch(error => console.error("Error loading JSON data:", error));
 }
 
+// Ensure initMap runs when the window loads
 window.onload = initMap;
