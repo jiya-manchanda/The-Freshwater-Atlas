@@ -80,9 +80,15 @@ button:hover {
   color: #333333;
 }
 
-.title {
-  font-size: 32px;
-  text-transform: uppercase;
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Intro Section */
