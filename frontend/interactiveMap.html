@@ -7,22 +7,22 @@
   <link rel="stylesheet" href="interactiveMap.css">
   <!-- Google Maps JavaScript API -->
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCopPijhxyxQ2TezLgmDZLuesIQYnNS81A"
-    loading="lazy"
-    async
-    defer>
-  </script>
-  <script src="interactiveMap.js" defer></script>
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCopPijhxyxQ2TezLgmDZLuesIQYnNS81A"
+  loading="lazy"
+  async
+  defer>
+</script>
+<script src="interactiveMap.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="nav">
-        <a href="aboutMap.html" class="nav-link">ABOUT</a>
-        <h1 class="title">THE FRESHWATER ATLAS</h1>
-        <a href="aboutTeam.html" class="nav-link">TEAM</a>
-      </div>
-    </header>
+<div class="container">
+  <header>
+    <div class="nav">
+      <a href="aboutMap.html" class="nav-link">ABOUT</a>
+      <h1 class="title">THE FRESHWATER ATLAS</h1>
+      <a href="aboutTeam.html" class="nav-link">TEAM</a>
+    </div>
+  </header>
     <main>
       <section class="intro">
         <p class="description">
@@ -30,8 +30,9 @@
         </p>
         <a href="./aboutMap.html" class="read-more">READ MORE <span class="arrow">→</span></a>
       </section>
-      <div class="content">
-        <!-- Sidebar -->
+    
+      <div class="content-layout">
+        <!-- Sidebar (Filters) -->
         <aside class="sidebar">
           <h2>Explore Resources</h2>
           <div class="filter-options">
@@ -52,29 +53,15 @@
               <span>Springs</span>
             </div>
           </div>
-          <ul id="resource-list">
-            <!-- Dynamic resource list will be inserted here -->
-          </ul>
         </aside>
+    
+        <!-- Map Section -->
+        <div id="map-container">
+          <div id="map"></div>
+        </div>
       </div>
-
-
-
-
-      <section class="filter">
-        <label for="resource-type">Filter by Type:</label>
-        <select id="resource-type">
-          <option value="all">All</option>
-          <option value="lake">Lake</option>
-          <option value="river">River</option>
-          <option value="spring">Spring</option>
-        </select>
-      </section>
-      <div id="map-container">
-        <div id="map"></div>
-      </div>
-
     </main>
+    
     <footer>
       <p>© 2024 The Freshwater Atlas. All rights reserved.</p>
     </footer>
