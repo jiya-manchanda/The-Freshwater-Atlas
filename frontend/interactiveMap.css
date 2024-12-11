@@ -234,3 +234,16 @@ footer {
   color: #fdf8f0;
   font-size: 12px;
 }
+
+/* filter item colors */
+.filter-item[data-filter="lake"] span {
+  color: red;
+}
+
+.filter-item[data-filter="river"] span {
+  color: green;
+}
+
+.filter-item[data-filter="spring"] span {
+  color: blue;
+}
