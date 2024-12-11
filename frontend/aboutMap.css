@@ -128,18 +128,29 @@ button:hover {
   max-width: 50%;
 }
 
-.chapter-image {
-  width: 40%;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
+.chapter-images {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.chapter-images img {
+  max-width: 45%; /* Ensure the images take up equal width */
+  height: auto;
+  border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .artifact {
   font-size: 18px;
   color: #77aad6;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Try Again Message Styling */
+.try-again {
+  color: red; /* Red font color for Try Again messages */
   font-weight: bold;
   margin-top: 15px;
 }
