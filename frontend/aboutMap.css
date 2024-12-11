@@ -80,9 +80,15 @@ button:hover {
   color: #333333;
 }
 
-.title {
-  font-size: 32px;
-  text-transform: uppercase;
+.logo {
+  height: 110 px; /* Increased size */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Intro Section */
@@ -128,18 +134,29 @@ button:hover {
   max-width: 50%;
 }
 
-.chapter-image {
-  width: 40%;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
+.chapter-images {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.chapter-images img {
+  max-width: 45%; /* Ensure the images take up equal width */
+  height: auto;
+  border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .artifact {
   font-size: 18px;
   color: #77aad6;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Try Again Message Styling */
+.try-again {
+  color: red; /* Red font color for Try Again messages */
   font-weight: bold;
   margin-top: 15px;
 }
@@ -151,4 +168,22 @@ footer {
   background-color: #333333;
   color: #fdf8f0;
   font-size: 14px;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 15px; /* Add spacing between icons */
+}
+
+footer .social-icons img {
+  width: 30px; /* Ensures all icons are the same size */
+  height: 30px;
+  border-radius: 50%; /* Optional: makes icons circular */
+  transition: transform 0.3s ease; /* Adds hover effect */
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
 }
