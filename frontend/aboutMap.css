@@ -81,7 +81,7 @@ button:hover {
 }
 
 .logo {
-  height: 100px; /* Increased height */
+  height: 150 px; /* Increased size */
   width: auto; /* Maintain aspect ratio */
 }
 
