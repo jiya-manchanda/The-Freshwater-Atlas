@@ -5,6 +5,22 @@ function initMap() {
     zoom: 10,
   };
 
+  /**
+   * Provides a singular object which matches the filter provided.
+   * @param jsonData {String} The JSON data as a string to parse
+   * @param waterbodyName {String} The "WaterbodyName" attribute from the data
+   * @param filter {String} The characteristic to filter by, valid options are "Flow"; "Temperature, water"; "Cloud cover"; "Wind direction (direction from, expressed 0-360 deg)";
+   */
+  function filterDataSource(jsonData, waterbodyName, filter) {
+    // parses the JSON provided in function arguments
+    const json = JSON.parse(jsonData);
+    // executes a filter on the JSON data to fetch the specific characteristic from the water body name
+    const filtered = json.filter(data => data.Characteristic === filter && data.WaterbodyName === waterbodyName);
+    // returns the most recent sample date for the specified filter
+    return filtered.sort((a, b) => new Date(b.SampleDate) - new Date(a.SampleDate))[0]
+  }
+
+
   // Initialize map
   const map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
