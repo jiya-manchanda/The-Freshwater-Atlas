@@ -34,6 +34,17 @@
       <div class="content-layout">
         <!-- Sidebar (Filters) -->
         <aside class="sidebar">
+          <h2>Search Freshwater Resources</h2>
+          <div class="search-container">
+            <input
+              type="text"
+              id="search-bar"
+              placeholder="Search by freshwater name..."
+            />
+            <button id="search-button" onclick="filterResources()">Search</button>
+          </div>
+          
+        
           <h2>Explore Resources</h2>
           <div class="filter-options">
             <div class="filter-item" data-filter="all">
@@ -54,7 +65,7 @@
             </div>
           </div>
         </aside>
-    
+        
         <!-- Map Section -->
         <div id="map-container">
           <div id="map"></div>
