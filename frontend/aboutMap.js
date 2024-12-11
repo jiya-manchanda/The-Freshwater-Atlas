@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const startButton = document.getElementById('start-game');
-  const buttons = document.querySelectorAll('.reveal-button');
-  const artifacts = document.querySelectorAll('.artifact');
-  const chapterImages = document.querySelectorAll('.chapter-image');
+  const chapterImages = document.querySelectorAll('.chapter-images img');
 
   let foundArtifacts = 0;
 
@@ -12,30 +10,33 @@ document.addEventListener('DOMContentLoaded', () => {
     startButton.parentElement.classList.add('hidden');
   });
 
-  // Reveal next chapter
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      const targetSelector = button.dataset.target;
-      const targetElement = document.querySelector(targetSelector);
-
-      if (targetElement) {
-        targetElement.classList.remove('hidden');
-        button.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-
-  // Artifact discovery
-  chapterImages.forEach((image, index) => {
+  // Artifact discovery or Try Again logic
+  chapterImages.forEach((image) => {
     image.addEventListener('click', () => {
-      artifacts[index].classList.remove('hidden');
-      image.style.pointerEvents = 'none';
-      foundArtifacts++;
+      const artifactId = image.dataset.artifact;
+      const targetArtifact = document.getElementById(artifactId);
 
-      if (foundArtifacts === artifacts.length) {
-        setTimeout(() => {
-          alert('Congratulations! You found all the artifacts!');
-        }, 500);
+      // Hide all messages in the current chapter
+      const parentChapter = image.closest('.chapter');
+      parentChapter.querySelectorAll('.artifact, .try-again').forEach((msg) => {
+        msg.classList.add('hidden');
+      });
+
+      // Reveal the appropriate message
+      targetArtifact.classList.remove('hidden');
+
+      // Disable further clicks for this image
+      image.style.pointerEvents = 'none';
+
+      // Increment artifacts found if it's an artifact
+      if (artifactId.startsWith('artifact')) {
+        foundArtifacts++;
+
+        if (foundArtifacts === document.querySelectorAll('.artifact').length) {
+          setTimeout(() => {
+            alert('Congratulations! You found all the artifacts!');
+          }, 500);
+        }
       }
     });
   });
