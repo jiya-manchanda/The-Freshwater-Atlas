@@ -6,7 +6,7 @@ function initMap() {
   };
 
   // Initialize map
-  const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  const map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
   // Custom icons for each type of water resource
   const icons = {
@@ -20,11 +20,11 @@ function initMap() {
 
   function addMarkers(resources) {
     // Remove existing markers
-    markers.forEach(marker => marker.setMap(null));
+    markers.forEach((marker) => marker.setMap(null));
     markers = [];
 
     // Add new markers
-    resources.forEach(resource => {
+    resources.forEach((resource) => {
       const marker = new google.maps.Marker({
         position: { lat: resource.lat, lng: resource.lng },
         map,
@@ -51,15 +51,13 @@ function initMap() {
             </p>
             <p style="margin: 5px 0; font-size: 12px; color: #555;">
               Biodiversity Index: <strong>${resource.biodiversity_index}</strong>
-            </p><br>
-            <p style="margin: 5px 0; font-size: 12px; color: #555;">
-              ${resource.description}
             </p>
+            <p style="margin: 5px 0; font-size: 12px; color: #555;">${resource.description}</p>
             ${
-            resource.url
-              ? `<a href="${resource.url}" target="_blank" style="text-decoration: none; color: #2E86C1;">Learn More</a>`
-              : ""
-          }
+              resource.url
+                ? `<a href="${resource.url}" target="_blank" style="text-decoration: none; color: #2E86C1;">Learn More</a>`
+                : ""
+            }
           </div>
         `);
         infoWindow.open(map, marker);
@@ -70,50 +68,53 @@ function initMap() {
   }
 
   // Fetch data from JSON file
-  fetch('freshwaterResources.json')
-    .then(response => response.json())
-    .then(freshwaterResources => {
+  fetch("freshwaterResources.json")
+    .then((response) => response.json())
+    .then((freshwaterResources) => {
       // Initialize markers
       addMarkers(freshwaterResources);
 
-      // Attach event listeners
-      const searchButton = document.getElementById('search-button');
-      const searchbar = document.getElementById('search-bar');
-      const typeFilter = document.getElementById('type-filter');
-      const aciditySlider = document.getElementById('acidity-range');
-      const temperatureSlider = document.getElementById('temperature-range');
-      const clarityFilter = document.getElementById('clarity-filter');
-      const applyFiltersButton = document.getElementById('apply-filters');
+      // Attach event listeners once the DOM is ready
+      const searchButton = document.getElementById("search-button");
+      const searchbar = document.getElementById("search-bar");
+      const filterItems = document.querySelectorAll(".filter-item");
+      const resourceList = document.getElementById("resource-list");
 
-      // Search by name
-      searchButton.addEventListener('click', () => {
-        const query = searchbar.value.toLowerCase().trim();
-        const filteredResources = freshwaterResources.filter(r =>
-          r.name.toLowerCase().includes(query)
-        );
-        addMarkers(filteredResources);
-      });
+      if (searchButton && searchbar) {
+        searchButton.addEventListener("click", () => {
+          const query = searchbar.value.toLowerCase().trim();
+          const filteredResources = freshwaterResources.filter((r) =>
+            r.name.toLowerCase().includes(query)
+          );
+          addMarkers(filteredResources);
+        });
+      }
 
-      // Apply filters
-      applyFiltersButton.addEventListener('click', () => {
-        const selectedType = typeFilter.value;
-        const acidityValue = parseFloat(aciditySlider.value);
-        const temperatureValue = parseFloat(temperatureSlider.value);
-        const selectedClarity = clarityFilter.value;
-
-        const filteredResources = freshwaterResources.filter(r => {
-          return (
-            (selectedType === "all" || r.type === selectedType) &&
-            (!selectedClarity || r.water_clarity === selectedClarity) &&
-            (Math.abs(r.acidity_level - acidityValue) <= 0.5) && // Small range for acidity
-            (Math.abs(r.temperature_celsius - temperatureValue) <= 2) // Small range for temperature
+      // Add event listeners for filters
+      filterItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const filterValue = item.getAttribute("data-filter");
+          addMarkers(
+            filterValue === "all"
+              ? freshwaterResources
+              : freshwaterResources.filter((r) => r.type === filterValue)
           );
         });
-
-        addMarkers(filteredResources);
       });
+
+      // Dropdown filter
+      if (resourceList) {
+        resourceList.addEventListener("change", (e) => {
+          const filterValue = e.target.value;
+          addMarkers(
+            filterValue === "all"
+              ? freshwaterResources
+              : freshwaterResources.filter((r) => r.type === filterValue)
+          );
+        });
+      }
     })
-    .catch(error => console.error("Error loading JSON data:", error));
+    .catch((error) => console.error("Error loading JSON data:", error));
 }
 
 // Ensure initMap runs when the window loads
