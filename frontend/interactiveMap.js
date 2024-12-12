@@ -75,44 +75,49 @@ function initMap() {
       addMarkers(freshwaterResources);
 
       // Attach event listeners once the DOM is ready
-      const searchButton = document.getElementById("search-button");
-      const searchbar = document.getElementById("search-bar");
-      const filterItems = document.querySelectorAll(".filter-item");
-      const resourceList = document.getElementById("resource-list");
+      const typeFilter = document.getElementById("type-filter");
+      const clarityFilter = document.getElementById("clarity-filter");
+      const temperatureSlider = document.getElementById("temperature-filter");
+      const temperatureValue = document.getElementById("temperature-value");
+      const biodiversitySlider = document.getElementById("biodiversity-index-filter");
+      const biodiversityValue = document.getElementById("biodiversity-value");
+      const aciditySlider = document.getElementById("acidity-filter");
+      const acidityValue = document.getElementById("acidity-value");
+      const applyFiltersButton = document.getElementById("apply-filters");
 
-      if (searchButton && searchbar) {
-        searchButton.addEventListener("click", () => {
-          const query = searchbar.value.toLowerCase().trim();
-          const filteredResources = freshwaterResources.filter((r) =>
-            r.name.toLowerCase().includes(query)
-          );
-          addMarkers(filteredResources);
-        });
-      }
-
-      // Add event listeners for filters
-      filterItems.forEach((item) => {
-        item.addEventListener("click", () => {
-          const filterValue = item.getAttribute("data-filter");
-          addMarkers(
-            filterValue === "all"
-              ? freshwaterResources
-              : freshwaterResources.filter((r) => r.type === filterValue)
-          );
-        });
+      // Update slider labels dynamically
+      temperatureSlider.addEventListener("input", () => {
+        temperatureValue.textContent = `${temperatureSlider.value}°C`;
       });
 
-      // Dropdown filter
-      if (resourceList) {
-        resourceList.addEventListener("change", (e) => {
-          const filterValue = e.target.value;
-          addMarkers(
-            filterValue === "all"
-              ? freshwaterResources
-              : freshwaterResources.filter((r) => r.type === filterValue)
+      biodiversitySlider.addEventListener("input", () => {
+        biodiversityValue.textContent = biodiversitySlider.value;
+      });
+
+      aciditySlider.addEventListener("input", () => {
+        acidityValue.textContent = aciditySlider.value;
+      });
+
+      // Apply filters based on user input
+      applyFiltersButton.addEventListener("click", () => {
+        const selectedType = typeFilter.value;
+        const selectedClarity = clarityFilter.value;
+
+        const filteredResources = freshwaterResources.filter((resource) => {
+          return (
+            (selectedType === "all" || resource.type === selectedType) &&
+            (selectedClarity === "" || resource.water_clarity === selectedClarity) &&
+            resource.temperature_celsius >= parseFloat(temperatureSlider.min) &&
+            resource.temperature_celsius <= parseFloat(temperatureSlider.value) &&
+            resource.biodiversity_index >= parseFloat(biodiversitySlider.min) &&
+            resource.biodiversity_index <= parseFloat(biodiversitySlider.value) &&
+            resource.acidity_level >= parseFloat(aciditySlider.min) &&
+            resource.acidity_level <= parseFloat(aciditySlider.value)
           );
         });
-      }
+
+        addMarkers(filteredResources);
+      });
     })
     .catch((error) => console.error("Error loading JSON data:", error));
 }

@@ -37,52 +37,49 @@
             <div class="content-layout">
                 <!-- Sidebar (Filters) -->
                 <aside class="sidebar">
-                    <h2>Search Freshwater Resources</h2>
-                    <div class="search-container">
-                        <input
-                            type="text"
-                            id="search-bar"
-                            placeholder="Search by freshwater name..."
-                        />
-                        <button id="search-button">Search</button>
-                    </div>
-
-                    <h2>Explore Resources</h2>
-                    <div class="filter-options">
-                        <div class="filter-item" data-filter="all">
-                            <img src="https://cdn-icons-png.flaticon.com/512/16159/16159169.png" alt="All resources" />
-                            <span>All</span>
+                    <h2>Filter Freshwater Resources</h2>
+                    <div class="filter-container">
+                        <div class="filter-group">
+                            <label for="type-filter">Type:</label>
+                            <select id="type-filter" class="filter-dropdown">
+                                <option value="all">All</option>
+                                <option value="lake">Lakes</option>
+                                <option value="river">Rivers</option>
+                                <option value="spring">Springs</option>
+                            </select>
                         </div>
-                        <div class="filter-item" data-filter="lake">
-                            <img src="https://cdn-icons-png.freepik.com/512/10415/10415397.png" alt="Lakes" />
-                            <span>Lakes</span>
-                        </div>
-                        <div class="filter-item" data-filter="river">
-                            <img src="https://cdn-icons-png.flaticon.com/512/119/119573.png" alt="Rivers" />
-                            <span>Rivers</span>
-                        </div>
-                        <div class="filter-item" data-filter="spring">
-                            <img src="https://cdn-icons-png.flaticon.com/512/2079/2079197.png" alt="Springs" />
-                            <span>Springs</span>
-                        </div>
-                    </div>
-                    <div class="attribute-filters">
-                        <label for="acidity-filter">Acidity Level:</label>
-                        <input type="number" id="acidity-filter" placeholder="e.g., 7.5" step="0.1" />
 
-                        <label for="clarity-filter">Water Clarity:</label>
-                        <select id="clarity-filter">
-                            <option value="">Any</option>
-                            <option value="Low">Low</option>
-                            <option value="Moderate">Moderate</option>
-                            <option value="High">High</option>
-                            <option value="Very High">Very High</option>
-                        </select>
+                        <div class="filter-group">
+                            <label for="acidity-filter">Acidity Level (6.5-8.5):</label>
+                            <input type="range" id="acidity-filter" min="6.5" max="8.5" step="0.1" class="filter-slider">
+                            <span id="acidity-value" class="filter-value">7.0</span>
+                        </div>
 
-                        <label for="temperature-filter">Temperature (°C):</label>
-                        <input type="number" id="temperature-filter" placeholder="e.g., 23" step="0.1" />
+                        <div class="filter-group">
+                            <label for="clarity-filter">Water Clarity:</label>
+                            <select id="clarity-filter" class="filter-dropdown">
+                                <option value="">Any</option>
+                                <option value="Low">Low</option>
+                                <option value="Moderate">Moderate</option>
+                                <option value="High">High</option>
+                                <option value="Very High">Very High</option>
+                                <option value="Clear">Clear</option>
+                            </select>
+                        </div>
 
-                        <button id="apply-attribute-filters">Apply Filters</button>
+                        <div class="filter-group">
+                            <label for="temperature-filter">Temperature (20-30°C):</label>
+                            <input type="range" id="temperature-filter" min="20" max="30" step="0.5" class="filter-slider">
+                            <span id="temperature-value" class="filter-value">25.0°C</span>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="biodiversity-index-filter">Biodiversity Index (6.0-9.0):</label>
+                            <input type="range" id="biodiversity-index-filter" min="6.0" max="9.0" step="0.1" class="filter-slider">
+                            <span id="biodiversity-value" class="filter-value">7.5</span>
+                        </div>
+
+                        <button id="apply-filters" class="apply-filters-btn">Apply Filters</button>
                     </div>
                 </aside>
 
@@ -92,7 +89,7 @@
                 </div>
             </div>
         </main>
-        
+
         <footer>
             <p>© 2024 The Freshwater Atlas. All rights reserved.</p>
             <div class="social-icons">

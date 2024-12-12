@@ -69,7 +69,7 @@ header::before {
 /* Sidebar */
 .sidebar {
   width: 400px;
-  background-color: #ffffff;
+  background-color: #f5fff2;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   border-right: 2px solid #ddd;
@@ -78,50 +78,73 @@ header::before {
 }
 
 .sidebar h2 {
-  font-size: 20px;
-  margin-bottom: 15px;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: bold;
+  text-align: center;
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-size: 16px;
   color: #333333;
   font-weight: bold;
 }
 
-.sidebar p {
-  margin: 10px 0;
+.filter-dropdown {
+  padding: 10px 15px;
   font-size: 14px;
-  color: #555;
-}
-
-.filter-options {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.filter-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  padding: 10px;
-  background-color: #f9f9f9;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 8px;
+  outline: none;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease;
 }
 
-.filter-item img {
-  width: 30px;
-  height: 30px;
+.filter-dropdown:focus {
+  border-color: #77aad6;
 }
 
-.filter-item span {
+.filter-slider {
+  width: 100%;
+  accent-color: #77aad6;
+  cursor: pointer;
+}
+
+.filter-value {
+  font-size: 14px;
+  color: #555555;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.apply-filters-btn {
+  padding: 12px 20px;
   font-size: 16px;
-  font-weight: 500;
-  color: #333333;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #77aad6;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.filter-item:hover {
-  background-color: #f1f1f1;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.apply-filters-btn:hover {
+  background-color: #6393b8;
+  transform: translateY(-2px);
 }
 
 /* Filter Item Colors */
@@ -232,7 +255,7 @@ header::before {
 .attribute-filters {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   margin-top: 20px;
 }
 
@@ -241,15 +264,34 @@ header::before {
   color: #333333;
 }
 
-.attribute-filters input,
-.attribute-filters select {
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 14px;
+.attribute-filters input[type="range"] {
+  width: 100%;
+  accent-color: #77aad6;
 }
 
-#apply-attribute-filters {
+.attribute-filters select {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.attribute-filters select:focus {
+  border-color: #77aad6;
+}
+
+.attribute-filters span {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+  color: #555;
+}
+
+#apply-filters {
   margin-top: 10px;
   padding: 8px 12px;
   background-color: #77aad6;
@@ -260,7 +302,7 @@ header::before {
   transition: background-color 0.3s ease;
 }
 
-#apply-attribute-filters:hover {
+#apply-filters:hover {
   background-color: #6393b8;
 }
 
