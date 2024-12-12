@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the hidden waterways of Orange County, Florida, with the Freshwater Atlas.">
+  <meta name="author" content="CTRL+ALT+ELITE">
   <title>Freshwater Atlas Adventure</title>
   <link rel="stylesheet" href="aboutmap.css">
   <script defer src="aboutmap.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div class="container">
@@ -13,7 +16,7 @@
       <nav class="nav">
         <a href="interactivemap.html" class="nav-link">HOME</a>
         <a href="interactivemap.html" class="logo-link">
-          <img src="fa - logo.png" alt="Freshwater Atlas Logo" class="logo">
+          <img src="fa-logo.png" alt="Freshwater Atlas Logo" class="logo">
         </a>
         <a href="aboutteam.html" class="nav-link">TEAM</a>
       </nav>
@@ -22,13 +25,14 @@
     <main>
       <!-- Introduction -->
       <section class="intro">
+        <h1>Freshwater Atlas Adventure</h1>
         <h2>Welcome to the Freshwater Atlas</h2>
         <p>The Freshwater Atlas is more than just a map—it's a gateway to understanding the hidden waterways that sustain life in Orange County, Florida. This innovative platform combines cutting-edge technology with environmental science to create an educational and interactive experience for users of all ages.</p>
         <p>Through this adventure, you'll uncover the stories behind the lakes, rivers, and springs that make up our region's aquatic ecosystem. From conservation efforts to challenges posed by pollution and climate change, the Freshwater Atlas offers insights that empower you to take action.</p>
         <button id="start-game">Start Your Journey</button>
       </section>
-      
-      <!-- Chapter 1 -->
+
+      <!-- Chapters -->
       <section class="chapter hidden" id="chapter1">
         <div class="chapter-content">
           <h2>Chapter 1: A World of Water</h2>
@@ -44,7 +48,6 @@
         </div>
       </section>
 
-      <!-- Chapter 2 -->
       <section class="chapter alt hidden" id="chapter2">
         <div class="chapter-content">
           <h2>Chapter 2: Interactive Technology</h2>
@@ -60,7 +63,6 @@
         </div>
       </section>
 
-      <!-- Chapter 3 -->
       <section class="chapter hidden" id="chapter3">
         <div class="chapter-content">
           <h2>Chapter 3: Partners in Conservation</h2>
@@ -76,7 +78,6 @@
         </div>
       </section>
 
-      <!-- Chapter 4 -->
       <section class="chapter tech hidden" id="chapter4">
         <div class="chapter-content">
           <h2>Chapter 4: The Vision for the Future</h2>
@@ -86,12 +87,9 @@
           <p class="artifact hidden" id="artifact4">🌊 You found the Ocean Wave Artifact!</p>
           <p class="try-again hidden" id="tryAgain4">Try again, artifact not found. You had a 50/50 shot!</p>
         </div>
-        <div class="chapter-images">
-          <img src="https://freshwaterfuture.org/wp-content/uploads/2022/02/freshwater-future-great-lakes-water-protection-logo-1.png" alt="New Chapter 4 Image" class="artifact-trigger" data-artifact="tryAgain4" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Orange_County%2C_FL_Logo.svg/1771px-Orange_County%2C_FL_Logo.svg.png" alt="Original Chapter 4 Image" class="artifact-trigger" data-artifact="artifact4" />
-        </div>
       </section>
     </main>
+
     <footer>
       <p>© 2024 The Freshwater Atlas. All rights reserved.</p>
       <div class="social-icons">
