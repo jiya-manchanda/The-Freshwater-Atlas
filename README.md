@@ -2,7 +2,8 @@
 
 The Freshwater Atlas is an interactive mapping project that highlights the diverse and essential freshwater resources of Orange County, Florida. Designed to be both educational and visually engaging, this tool allows users to explore key freshwater sites, understand their ecological significance, and appreciate the challenges involved in preserving these natural resources. By integrating detailed data and intuitive design, the project aims to raise awareness and foster action toward conservation.
 
-It is accessible here: https://mracs.dev/freshwater-atlas/
+The website is accessible here: https://mracs.dev/freshwater-atlas/ || mracs.dev/fa
+Our slides are accessible here: https://www.canva.com/design/DAGZBVBKdA8/_1iyzmx4w4oGm8HU3p9dKA/view?utm_content=DAGZBVBKdA8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3a19c8ac0b
 
 ---
 
