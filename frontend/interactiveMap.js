@@ -50,16 +50,16 @@ function initMap() {
               Water Clarity: <strong>${resource.water_clarity}</strong>
             </p>
             <p style="margin: 5px 0; font-size: 12px; color: #555;">
-              Biodiversity Index: <strong>${resource.bidiversity_index}</strong>
+              Biodiversity Index: <strong>${resource.biodiversity_index}</strong>
             </p><br>
             <p style="margin: 5px 0; font-size: 12px; color: #555;">
               ${resource.description}
             </p>
             ${
             resource.url
-                ? `<a href="${resource.url}" target="_blank" style="text-decoration: none; color: #2E86C1;">Learn More</a>`
-                : ""
-        }
+              ? `<a href="${resource.url}" target="_blank" style="text-decoration: none; color: #2E86C1;">Learn More</a>`
+              : ""
+          }
           </div>
         `);
         infoWindow.open(map, marker);
@@ -71,52 +71,49 @@ function initMap() {
 
   // Fetch data from JSON file
   fetch('freshwaterResources.json')
-      .then(response => response.json())
-      .then(freshwaterResources => {
-        // Initialize markers
-        addMarkers(freshwaterResources);
+    .then(response => response.json())
+    .then(freshwaterResources => {
+      // Initialize markers
+      addMarkers(freshwaterResources);
 
-        // Attach event listeners once the DOM is ready
-        const searchButton = document.getElementById('search-button');
-        const searchbar = document.getElementById('search-bar');
-        const filterItems = document.querySelectorAll('.filter-item');
-        const resourceList = document.getElementById('resource-list');
+      // Attach event listeners
+      const searchButton = document.getElementById('search-button');
+      const searchbar = document.getElementById('search-bar');
+      const typeFilter = document.getElementById('type-filter');
+      const aciditySlider = document.getElementById('acidity-range');
+      const temperatureSlider = document.getElementById('temperature-range');
+      const clarityFilter = document.getElementById('clarity-filter');
+      const applyFiltersButton = document.getElementById('apply-filters');
 
-        if (searchButton && searchbar) {
-          searchButton.addEventListener('click', () => {
-            const query = searchbar.value.toLowerCase().trim();
-            const filteredResources = freshwaterResources.filter(r =>
-                r.name.toLowerCase().includes(query)
-            );
-            addMarkers(filteredResources);
-          });
-        }
+      // Search by name
+      searchButton.addEventListener('click', () => {
+        const query = searchbar.value.toLowerCase().trim();
+        const filteredResources = freshwaterResources.filter(r =>
+          r.name.toLowerCase().includes(query)
+        );
+        addMarkers(filteredResources);
+      });
 
-        // Add event listeners for filters
-        filterItems.forEach(item => {
-          item.addEventListener('click', () => {
-            const filterValue = item.getAttribute('data-filter');
-            addMarkers(
-                filterValue === 'all'
-                    ? freshwaterResources
-                    : freshwaterResources.filter(r => r.type === filterValue)
-            );
-          });
+      // Apply filters
+      applyFiltersButton.addEventListener('click', () => {
+        const selectedType = typeFilter.value;
+        const acidityValue = parseFloat(aciditySlider.value);
+        const temperatureValue = parseFloat(temperatureSlider.value);
+        const selectedClarity = clarityFilter.value;
+
+        const filteredResources = freshwaterResources.filter(r => {
+          return (
+            (selectedType === "all" || r.type === selectedType) &&
+            (!selectedClarity || r.water_clarity === selectedClarity) &&
+            (Math.abs(r.acidity_level - acidityValue) <= 0.5) && // Small range for acidity
+            (Math.abs(r.temperature_celsius - temperatureValue) <= 2) // Small range for temperature
+          );
         });
 
-        // Dropdown filter
-        if (resourceList) {
-          resourceList.addEventListener('change', e => {
-            const filterValue = e.target.value;
-            addMarkers(
-                filterValue === 'all'
-                    ? freshwaterResources
-                    : freshwaterResources.filter(r => r.type === filterValue)
-            );
-          });
-        }
-      })
-      .catch(error => console.error("Error loading JSON data:", error));
+        addMarkers(filteredResources);
+      });
+    })
+    .catch(error => console.error("Error loading JSON data:", error));
 }
 
 // Ensure initMap runs when the window loads

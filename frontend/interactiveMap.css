@@ -1,4 +1,3 @@
-
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   color: #333333;
@@ -6,7 +5,6 @@ body {
   padding: 0;
   height: 100vh;
   background-color: #fdf8f0;
-  color: #333333;
 }
 
 h1, h2, h3 {
@@ -25,20 +23,17 @@ header {
   display: flex;
   justify-content: center; 
   align-items: center;
-  z-index: 2;
 }
 
 .logo-link {
   margin: 0 15px;
 }
 
-
 .nav-link {
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
   color: #333333;
-  z-index: 2;
 }
 
 .title {
@@ -46,10 +41,9 @@ header {
   text-transform: uppercase;
 }
 
-
 /* Sidebar */
 .sidebar {
-  width: 350px; /* Fixed width */
+  width: 350px;
   background-color: #f4f4f4;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -64,28 +58,74 @@ header {
   font-family: 'JetBrains Mono', monospace;
 }
 
-.sidebar p {
-  margin: 10px 0;
-  font-size: 14px;
-  color: #555;
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.action-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
+.filters label {
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+.filters select,
+.filters input[type="number"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Range Sliders */
+.filters input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #77aad6;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.filters input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #333333;
+  cursor: pointer;
+}
+
+.filters input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #333333;
+  cursor: pointer;
+}
+
+.filters span {
+  font-size: 14px;
+  color: #555555;
+  margin-left: 5px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
   font-size: 14px;
   background-color: #77aad6;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.action-button:hover {
+button:hover {
   background-color: #6393b8;
 }
 
@@ -93,7 +133,6 @@ header {
 #map-container {
   flex: 1;
   height: 100%;
-  background-color: #b7dff5; 
 }
 
 #map {
@@ -104,33 +143,69 @@ header {
 /* Footer */
 footer {
   text-align: center;
-  padding: 10px;
-  background-color: #b7c8b5;
-  padding: 20px 10%;
+  padding: 20px;
+  background-color: #333333;
+  color: #fdf8f0;
+  font-size: 14px;
 }
 
-.nav {
+footer .social-icons {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
+  gap: 15px;
+}
+
+footer .social-icons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
   align-items: center;
-  gap:430px;
-  z-index: 2;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.nav-link {
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333333;
+#search-bar {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
 }
 
-.title {
-  font-size: 32px;
-  text-transform: uppercase;
+#search-bar:focus {
+  border-color: #77aad6;
 }
 
+#search-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #77aad6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-/* Description Section */
+#search-button:hover {
+  background-color: #6393b8;
+}
+
+/* Intro Section */
 .intro {
   text-align: center;
   margin: 20px auto;
@@ -163,221 +238,4 @@ footer {
 .arrow {
   font-size: 18px;
   margin-left: 5px;
-}
-
-/* Content Layout */
-.content-layout {
-  display: flex;
-  height: calc(100vh - 180px);
-  margin-top: 20px;
-}
-
-/* Sidebar */
-.sidebar {
-  width: 400px;
-  background-color: #ffffff;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  border-right: 2px solid #ddd;
-  overflow-y: auto;
-  box-sizing: border-box;
-}
-
-.sidebar h2 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: #333333;
-  font-weight: bold;
-}
-
-.filter-options {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.filter-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.filter-item img {
-  width: 30px;
-  height: 30px;
-}
-
-.filter-item span {
-  font-size: 16px;
-  font-weight: 500;
-  color: #333333;
-}
-
-.filter-item:hover {
-  background-color: #f1f1f1;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Map Section */
-#map-container {
-  flex: 1;
-  margin: 0;
-}
-
-#map {
-  width: 100%;
-  height: 100%;
-}
-
-/* filter item colors */
-.filter-item[data-filter="lake"] span {
-  color: red;
-}
-
-.filter-item[data-filter="river"] span {
-  color: green;
-}
-
-.filter-item[data-filter="spring"] span {
-  color: blue;
-}
-
-
-/* Search Bar Container */
-.search-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-#search-bar {
-  flex: 1; 
-  padding: 8px 12px;
-  font-size: 14px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  outline: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-}
-
-#search-bar:focus {
-  border-color: #77aad6;
-}
-
-#search-button {
-  padding: 8px 12px;
-  font-size: 14px;
-  background-color: #77aad6;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#search-button:hover {
-  background-color: #6393b8;
-}
-
-/* logo */
-.logo {
-  height: 120px;
-  width: auto; 
-  z-index: 2;
-}
-
-header {
-  background: url('https://www.kunstnet.de/w4/16654/wasser-ii.jpg') center/cover no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  padding: 20px;
-  text-align: center;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(183, 200, 181, 0.5);
-}
-
-.logo-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333333;
-  color: #fdf8f0;
-  font-size: 14px;
-}
-
-footer .social-icons {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  gap: 15px;
-}
-
-footer .social-icons img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-footer .social-icons img:hover {
-  transform: scale(1.2);
-}
-
-/* extra filters */
-.attribute-filters {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.attribute-filters label {
-  font-size: 14px;
-  color: #333333;
-}
-
-.attribute-filters input,
-.attribute-filters select {
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-#apply-attribute-filters {
-  margin-top: 10px;
-  padding: 8px 12px;
-  background-color: #77aad6;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#apply-attribute-filters:hover {
-  background-color: #6393b8;
 }
