@@ -152,7 +152,7 @@ button:hover {
 
 .artifact {
   font-size: 18px;
-  color: #77aad6;
+  color: #005f73; /* Dark teal for better visibility */
   font-weight: bold;
   margin-top: 15px;
 }
