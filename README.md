@@ -1,62 +1,116 @@
 # The Freshwater Atlas 🌊
 
-The **Freshwater Atlas** is an interactive mapping project that highlights the diverse and essential freshwater resources of Orange County, Florida. Designed to be both educational and visually engaging, this tool allows users to explore key freshwater sites, understand their ecological significance, and appreciate the challenges involved in preserving these natural resources. By integrating detailed data and intuitive design, the project aims to raise awareness and foster action toward conservation.
+The Freshwater Atlas is an interactive mapping project that highlights the diverse and essential freshwater resources of Orange County, Florida. Designed to be both educational and visually engaging, this tool allows users to explore key freshwater sites, understand their ecological significance, and appreciate the challenges involved in preserving these natural resources. By integrating detailed data and intuitive design, the project aims to raise awareness and foster action toward conservation.
+
+---
+
+## 📚 Introduction, Goals, and Objectives
+
+The Freshwater Atlas is an interactive website designed to raise awareness about the freshwater resources of Orange County, Florida. Our target audience includes college students, environmental enthusiasts, and local residents. This diverse audience could range from children exploring the map’s interactive features to adults seeking detailed information about the region’s freshwater treasures.
+
+### Goals:
+- **Create a user-friendly platform** to explore freshwater resources.
+- **Encourage curiosity and environmental stewardship** through an engaging design.
+- **Highlight conservation efforts** and challenges surrounding freshwater ecosystems.
+
+---
 
 ## 🌟 Project Overview
 
-Freshwater resources—such as lakes, rivers, and springs—are the lifeblood of ecosystems and human activities. However, these resources face numerous threats, including pollution, overuse, and habitat degradation. The Freshwater Atlas seeks to address these issues by providing a platform where users can:
+Freshwater resources—such as lakes, rivers, and springs—are the lifeblood of ecosystems and human activities. However, these resources face numerous threats, including pollution, overuse, and habitat degradation.
 
-- **Explore**: Navigate an interactive map featuring key freshwater bodies in Orange County.
-- **Learn**: Gain insights into water quality, conservation efforts, wildlife habitats, and the role of freshwater in sustaining life.
-- **Act**: Understand the impact of human activities and the importance of restoration initiatives.
+### Features:
+- **Explore:** Navigate an interactive map featuring key freshwater bodies in Orange County.
+- **Learn:** Discover insights about water quality, conservation efforts, and wildlife habitats.
+- **Act:** Understand the impact of human activities and the importance of restoration initiatives.
 
-### Why This Project Matters
+---
 
-Freshwater resources are vital not only for drinking water but also for agriculture, recreation, and supporting biodiversity. However, these resources are finite and vulnerable to overexploitation. By presenting data in an accessible format, the Freshwater Atlas empowers users—from students and researchers to local residents—to:
+## 🌍 Why This Project Matters
 
+Freshwater is essential for drinking, agriculture, recreation, and biodiversity. However, these finite resources are vulnerable to overexploitation. The Freshwater Atlas empowers users to:
 - Recognize the interconnectedness of freshwater ecosystems.
 - Understand the critical importance of sustainable water management.
 - Take informed steps toward conservation and advocacy.
 
+---
+
+## 🎨 Design Process
+
+### Initial Vision and Wireframes
+- The initial concept included a homepage and a dynamic interactive map with sidebar filters.
+- The final design evolved into **three webpages**: the interactive map, an "About the Map" page, and an "About the Team" page for improved structure and usability.
+
+### Key Design Changes
+1. **About Map Page:** Provides insights into the map's purpose and interactive layers.
+2. **Interactive Map Filter Redesign:** Replaced the fixed sidebar with clickable map pins for better usability.
+
+---
+
+## 🚧 Implementation Challenges
+
+### Google Maps API Integration
+- Learning the API, customizing markers, and dynamically loading data from JSON files.
+
+### Database and JSON Integration
+- Managing a large dataset by creating a custom JSON file and linking it to JavaScript for dynamic rendering.
+
+---
+
 ## 🚀 Key Features
 
-- **Interactive Map**: A dynamic, user-friendly map where users can explore freshwater sites, such as:
-  - Lakes, rivers, and springs
-  - Wildlife habitats and ecosystems
-  - Pollution sources and restoration projects
-- **Educational Content**:
-  - Water quality and its impact on ecosystems
-  - Conservation challenges and ongoing efforts
-  - The role of freshwater in supporting biodiversity
-- **Visual Insights**: Clear, layered visualizations that make complex data easy to understand.
+### Interactive Map
+- **Freshwater Sites:** Lakes, rivers, and springs.
+- **Wildlife Habitats:** Details about ecosystems and species.
+- **Pollution Sources:** Problem areas and ongoing restoration projects.
 
-## 🎯 Project Goals
+### Educational Content
+- **Water Quality:** Its role in ecosystems and human activities.
+- **Conservation Challenges:** Threats and restoration efforts.
+- **Biodiversity:** Freshwater's role in sustaining life.
 
-This project aims to:
-1. **Educate**: Provide a deeper understanding of the significance of freshwater resources and their impact on both the environment and society.
-2. **Inspire**: Encourage local residents and policymakers to prioritize freshwater conservation.
-3. **Engage**: Create an intuitive, interactive tool that bridges the gap between scientific data and public awareness.
+### Visual Insights
+- Clear, layered visualizations for users of all knowledge levels.
 
-## 📊 Data Sources and Research
+---
 
-The Freshwater Atlas integrates data from multiple trusted sources, ensuring accuracy and relevance. These include:
+## 🕰️ Data Sources and Research
 
-- **[Orange County Water Atlas](https://orange.wateratlas.usf.edu/watershed/default.asp?wshedid=11&wbodyatlas=watershed)**:
-  A comprehensive database on local water bodies and their ecological health.
-- **[St. Johns River Water Management District](https://www.sjrwmd.com/data/water-quality/)**:
-  Data on water quality, management efforts, and conservation initiatives.
-- **[USGS National Water Information System](https://waterdata.usgs.gov/nwis)**:
-  Nationwide data on surface water, groundwater, and water quality.
-- **[Florida DEP Waterbody IDs (WBIDs)](https://geodata.dep.state.fl.us/datasets/waterbody-ids-wbids/explore)**:
-  Geospatial data identifying Florida’s water bodies and their environmental status.
-- **Freshwater Research Center at Rollins**:
-  Guidance and support on local research and ecological data.
+- **Orange County Water Atlas:** Comprehensive data on local water bodies.
+- **USGS National Water Information System:** Nationwide data on water quality.
+- **Florida DEP WBIDs:** Geospatial data identifying Florida's water bodies.
+
+---
 
 ## 🛠️ Technologies Used
 
-The project leverages modern web technologies for seamless functionality and design:
-- **Google Maps API**: For interactive mapping and data visualization.
-- **HTML5/CSS3**: For clean and responsive design.
-- **JavaScript**: For dynamic map functionality and interactivity.
+- **Google Maps API:** Interactive mapping and data visualization.
+- **HTML5/CSS3:** Responsive design and clean interfaces.
+- **JavaScript:** Dynamic functionality and interactivity.
 
-## 📁 File Structure
+---
+
+## 📝 Lessons Learned
+
+### Technical Skills Development
+- Gained proficiency in APIs and JavaScript for interactive web development.
+
+### Collaborative Problem-Solving
+- Teamwork helped resolve challenges like debugging and handling large datasets.
+
+### Rewarding Aspects
+- Seeing the final product, with clickable map markers and detailed information, was a highlight. The project inspired us to explore the intersection of technology and environmental conservation further.
+
+---
+
+## 🙌 Contributors
+
+- **Lina Baly**
+- **Jiya Manchanda**
+- **Angie Lam**
+- **Matthew Ray**
+
+**Course:** CMS 352: Web Application Development - Fall 2024  
+**Team Name:** CTRL+ALT+ELITE  
+**Instructor:** Dr. Valerie Summet  
+**Date:** December 11, 2024
