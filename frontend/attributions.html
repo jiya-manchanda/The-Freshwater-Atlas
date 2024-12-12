@@ -4,7 +4,99 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Attributions - Freshwater Atlas</title>
-  <link rel="stylesheet" href="aboutmap.css">
+  <style>
+    /* General Styles */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'IBM Plex Sans', sans-serif;
+      background-color: #fdf8f0;
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    h1, h2, h3 {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    a {
+      color: #77aad6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #5b8ea2;
+    }
+
+    /* Header Styles */
+    header {
+      background: url('https://www.kunstnet.de/w4/16654/wasser-ii.jpg') center/cover no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(183, 200, 181, 0.5); 
+      z-index: 1;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .nav-link {
+      color: #333333;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Attributions Content */
+    .attributions {
+      padding: 20px;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    .attributions h1, .attributions h2 {
+      color: #333333;
+    }
+
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333333;
+      color: #fdf8f0;
+      font-size: 14px;
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -16,7 +108,7 @@
   </header>
 
   <main>
-    <section class="attributions" style="padding-left: 20px;">
+    <section class="attributions">
       <h1>Attributions</h1>
       <p>This project integrates data and resources from trusted organizations and uses modern web technologies to deliver an engaging experience.</p>
 
