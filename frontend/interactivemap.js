@@ -84,6 +84,8 @@ function initMap() {
       const aciditySlider = document.getElementById("acidity-filter");
       const acidityValue = document.getElementById("acidity-value");
       const applyFiltersButton = document.getElementById("apply-filters");
+      const searchBar = document.getElementById("search-bar");
+      const searchButton = document.getElementById("search-button");
 
       // Update slider labels dynamically
       temperatureSlider.addEventListener("input", () => {
@@ -96,6 +98,17 @@ function initMap() {
 
       aciditySlider.addEventListener("input", () => {
         acidityValue.textContent = aciditySlider.value;
+      });
+
+      // Search bar functionality
+      searchButton.addEventListener("click", () => {
+        const searchQuery = searchBar.value.trim().toLowerCase();
+
+        const filteredResources = freshwaterResources.filter((resource) =>
+          resource.name.toLowerCase().includes(searchQuery)
+        );
+
+        addMarkers(filteredResources);
       });
 
       // Apply filters based on user input
