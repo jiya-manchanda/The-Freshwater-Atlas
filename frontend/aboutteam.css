@@ -163,3 +163,19 @@ footer .social-icons img {
 footer .social-icons img:hover {
   transform: scale(1.2);
 }
+
+footer a {
+  color: #77aad6;
+  font-family: 'IBM Plex Sans', sans-serif; 
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:visited {
+  color: #77aad6; 
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #5b8ea2; 
+}

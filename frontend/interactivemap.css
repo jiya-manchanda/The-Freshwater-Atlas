@@ -302,3 +302,19 @@ header::before {
   background-color: rgba(183, 200, 181, 0.5);
   z-index: 1;
 }
+
+footer a {
+  color: #77aad6;
+  font-family: 'IBM Plex Sans', sans-serif; 
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:visited {
+  color: #77aad6; 
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #5b8ea2; 
+}
