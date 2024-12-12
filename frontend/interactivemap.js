@@ -68,7 +68,7 @@ function initMap() {
   }
 
   // Fetch data from JSON file
-  fetch("freshwaterResources.json")
+  fetch("freshwaterresources.json")
     .then((response) => response.json())
     .then((freshwaterResources) => {
       // Initialize markers
