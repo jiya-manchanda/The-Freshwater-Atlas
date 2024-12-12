@@ -41,6 +41,18 @@ function initMap() {
               Type: <strong>${resource.type.charAt(0).toUpperCase() + resource.type.slice(1)}</strong>
             </p>
             <p style="margin: 5px 0; font-size: 12px; color: #555;">
+              Acidity Level: <strong>${resource.acidity_level}</strong>
+            </p>
+            <p style="margin: 5px 0; font-size: 12px; color: #555;">
+              Temperature: <strong>${resource.temperature_celsius}°C</strong>
+            </p>
+            <p style="margin: 5px 0; font-size: 12px; color: #555;">
+              Water Clarity: <strong>${resource.water_clarity}</strong>
+            </p>
+            <p style="margin: 5px 0; font-size: 12px; color: #555;">
+              Biodiversity Index: <strong>${resource.bidiversity_index}</strong>
+            </p><br>
+            <p style="margin: 5px 0; font-size: 12px; color: #555;">
               ${resource.description}
             </p>
             ${
